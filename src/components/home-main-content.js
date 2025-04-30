@@ -39,14 +39,14 @@ const HomeMainContent = () => {
             animate={{ opacity: 1, filter: "blur(0)", transform: "scale(1) translateX(0)" }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
           >
-          // complete the game to continue
+          {"//"} complete the game to continue
           </motion.p>
           <motion.p
             initial={{ opacity: 0, filter: "blur(20px)", transform: "scale(1.2) translateX(-150px)" }}
             animate={{ opacity: 1, filter: "blur(0)", transform: "scale(1) translateX(0)" }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.60 }}
           >
-          // find my profile on Github:
+          {"//"} find my profile on Github:
           </motion.p>
           <motion.p
             initial={{ opacity: 0, filter: "blur(20px)", transform: "scale(1.2) translateX(-150px)" }}
