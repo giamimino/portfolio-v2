@@ -1,0 +1,25 @@
+@use '../styles/color.scss' as *;
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+
+html,
+body {
+  overflow-x: hidden;
+  font-family: "Fira Code", sans-serif;
+}
+
+body {
+  background: $theme-theme-backdrop;
+  padding: 70px;
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

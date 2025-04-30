@@ -1,0 +1,113 @@
+@use './color.scss' as *;
+
+.homeMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 146px;
+  position: relative;
+}
+
+
+.homeMain main {
+ display: flex;
+ flex-direction: column;
+ gap: 75px;
+}
+
+.homeMain main aside:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.homeMain main aside:nth-child(1) p:nth-child(1) {
+  color: $theme-foreground;
+  font-size: 18px;
+}
+
+.homeMain main aside:nth-child(1) h1 {
+  color: $theme-heading-foreground;
+  font-size: 60px;
+  line-height: 66px;
+  font-weight: 400;
+}
+
+.homeMain main aside:nth-child(1) p:last-child {
+  color: $primitive-indigo-500;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.homeMain main aside:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.homeMain main aside:nth-child(2) p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.homeMain main aside:nth-child(2) p:nth-child(1),
+.homeMain main aside:nth-child(2) p:nth-child(2) {
+  color: $theme-foreground;
+}
+
+.homeMain main aside:nth-child(2) p:last-child {
+  color: $theme-heading-foreground;
+}
+
+.homeMain main aside:nth-child(2) p:last-child span:nth-child(1) {
+  color: $primitive-indigo-500;
+}
+
+.homeMain main aside:nth-child(2) p:last-child span:nth-child(2) {
+  color: $primitive-teal-400;
+}
+
+.homeMain main aside:nth-child(2) p:last-child span:nth-child(3) {
+  color: $theme-link-foreground;
+  text-decoration: underline;
+}
+
+.homeMain section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+}
+
+
+
+
+.homeMain section img:nth-child(1) {
+  position: absolute;
+  z-index: 1;
+  opacity: 0.8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.homeMain section img:nth-child(2),
+.homeMain section img:nth-child(6) {
+  opacity: 0.1;
+  filter: blur(4px);
+  z-index: 10;
+}
+
+.homeMain section img:nth-child(3),
+.homeMain section img:nth-child(5) {
+  opacity: 0.4;
+  filter: blur(4px);
+  z-index: 10;
+}
+
+.homeMain section img:nth-child(4) {
+  z-index: 10;
+}

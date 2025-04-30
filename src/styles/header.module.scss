@@ -1,0 +1,48 @@
+@use './color.scss' as *;
+
+.header {
+  width: 100%;
+  display: flex;
+  color: $theme-foreground;
+  border-bottom: 1px solid $theme-theme-stroke;
+  z-index: 99;
+  background-color: $theme-theme-background;
+  position: relative;
+}
+
+.header h1 {
+  padding: 16px 154px 16px 24px;
+  font-size: 16px;
+  border-right: 1px solid $theme-theme-stroke;
+  font-weight: 500;
+}
+
+.header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.header ul li {
+  padding: 16px 24px;
+  border-right: 1px solid $theme-theme-stroke;
+  cursor: pointer;
+  transition: all 200ms ease;
+  font-weight: 500;
+}
+
+.header ul li:hover {
+  color: $theme-heading-foreground;
+}
+
+.header ul li:last-child {
+  margin-left: auto;
+  border-left: 1px solid $theme-theme-stroke;
+  border-right: none;
+}
+
+.header ul li.active {
+ border-bottom: 2px solid $primary-background;
+}
