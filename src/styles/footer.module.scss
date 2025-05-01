@@ -1,0 +1,51 @@
+@use './color.scss' as *;
+
+.footer {
+  width: 100%;
+  border-top: 1px solid $theme-theme-stroke;
+  z-index: 100;
+  position: absolute;
+  background-color: $theme-theme-background;
+  color: $theme-foreground;
+  bottom: 0;
+}
+
+.footer ul {
+  display: flex;
+  list-style: none;
+}
+
+.footer ul a {
+  padding: 16px 24px;
+  border-right: 1px solid $theme-theme-stroke;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all .3s ease;
+}
+
+.footer ul a:nth-child(2),
+.footer ul a:nth-child(3) {
+  cursor: pointer;
+}
+
+.footer ul a:last-child:hover {
+  text-decoration: underline;
+  color: $theme-heading-foreground;
+}
+
+.footer ul a img {
+  transition: all .3s ease;
+}
+
+.footer ul a:nth-child(2):hover img,
+.footer ul a:nth-child(3):hover img {
+  transform: scale(1.1);
+}
+
+.footer ul a:last-child {
+  margin-left: auto;
+  border-left: 1px solid $theme-theme-stroke;
+  border-right: none;
+  cursor: pointer;
+}

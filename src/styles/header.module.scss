@@ -25,7 +25,7 @@
   flex-grow: 1;
 }
 
-.header ul li {
+.header ul a {
   padding: 16px 24px;
   border-right: 1px solid $theme-theme-stroke;
   cursor: pointer;
@@ -33,16 +33,16 @@
   font-weight: 500;
 }
 
-.header ul li:hover {
+.header ul a:hover {
   color: $theme-heading-foreground;
 }
 
-.header ul li:last-child {
+.header ul a:last-child {
   margin-left: auto;
   border-left: 1px solid $theme-theme-stroke;
   border-right: none;
 }
 
-.header ul li.active {
+.header ul a.active {
  border-bottom: 2px solid $primary-background;
 }
