@@ -1,0 +1,80 @@
+@use './color.scss' as *;
+
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.sideBar {
+  border-right: 1px solid $theme-theme-stroke;
+  height: 100%;
+  font-size: 16px;
+  width: 332.61px;
+  font-weight: 400;
+}
+
+.mainFolder {
+  padding: 12px 24px;
+  color: $theme-foreground;
+  border-bottom: 1px solid $theme-theme-stroke;
+  cursor: default;
+  transition: all .2s ease;
+  user-select: none;
+}
+
+.mainFolder.open {
+  color: $primitive-slate-50;
+}
+
+.filesLang {
+  padding: 12px 24px 8px;
+  color: #fff;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.filesLang input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $primitive-slate-500;
+  border-radius: 4px;
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: all .3s ease;
+  outline: 1px solid transparent;
+}
+
+.filesLang input[type="checkbox"]:hover {
+  outline: 3px solid $primitive-slate-700;
+}
+
+.filesLang input[type="checkbox"]:checked {
+  background-color: $primitive-slate-500;
+}
+
+.filesLang input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid $primitive-slate-50;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+}
+
+.filesLang p {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.filesLang p i {
+  color: $primitive-slate-500;
+  font-size: 24px;
+}

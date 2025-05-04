@@ -1,0 +1,61 @@
+@use './color.scss' as *;
+
+
+.sidebar {
+  border-right: 1px solid $theme-theme-stroke;
+  height: 100%;
+  font-size: 16px;
+  width: 332.61px;
+  font-weight: 400;
+}
+
+.mainFolder {
+  padding: 12px 24px;
+  color: $theme-foreground;
+  border-bottom: 1px solid $theme-theme-stroke;
+  cursor: default;
+  transition: all .2s ease;
+  user-select: none;
+}
+
+.mainFolder.open {
+  color: $primitive-slate-50;
+}
+
+.mainFolder:nth-child(2) {
+  border-top: 1px solid $theme-theme-stroke;
+}
+
+.secondaryFolder {
+  padding: 6px 12px 6px 24px;
+  color: $theme-foreground;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bioFolder i:nth-child(2) {
+  color: $primitive-rose-400;
+}
+
+.interestsFolder i:nth-child(2) {
+  color: $primitive-teal-400;
+}
+
+.educationFolder i:nth-child(2) {
+  color: $primitive-indigo-400;
+}
+
+.markdown {
+  padding: 3px 6px 3px 48px;
+  color: $primitive-slate-500;
+}
+
+.contact {
+  color: $theme-foreground;
+  display: flex;
+  gap: 8px;
+  padding: 12px 24px;
+  align-items: center;
+}
