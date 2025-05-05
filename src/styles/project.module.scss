@@ -1,1 +1,74 @@
 @use './color.scss' as *;
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.project header {
+  display: flex;
+  gap: 8px;
+}
+
+.project header p:nth-child(1) {
+  color: $primitive-indigo-500;
+  font-weight: 500;
+}
+
+.project header p:nth-child(2) {
+  color: $theme-foreground;
+  font-weight: 500;
+}
+
+
+.project footer {
+  height: auto;
+  background-color: $primitive-slate-950;
+  border: 1px solid $primitive-slate-800;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  color: $theme-foreground;
+  font-weight: 500;
+  overflow: hidden;
+}
+
+.project footer div {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+
+.project footer img {
+  width: 100%;
+  height: 145px !important;
+  object-fit: cover;
+  border-bottom: 1px solid $primitive-slate-800;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  user-select: none;
+}
+
+
+.project footer a {
+  font-family: "Fira Code", sans-serif;
+  padding: 10px 12px;
+  background-color: $primitive-slate-600;
+  border-radius: 8px;
+  color: $theme-heading-foreground;
+  width: fit-content;
+  border: 1px solid $primitive-slate-600;
+  font-weight: 500;
+  transition: .3s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.project footer a:hover {
+  background-color: transparent;
+}

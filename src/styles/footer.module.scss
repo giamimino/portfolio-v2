@@ -27,6 +27,7 @@
 .footer ul a:nth-child(2),
 .footer ul a:nth-child(3) {
   cursor: pointer;
+  user-select: none;
 }
 
 .footer ul a:last-child:hover {

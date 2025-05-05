@@ -3,6 +3,8 @@
 import styles from '../styles/projects.module.scss'
 import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
+import Project from './project';
+import Image from 'next/image';
 
 const Folder = ({ title, children, classR }) => {
   const [open, setOpen] = useState(false);
@@ -38,6 +40,53 @@ const ProjectContent = () => {
           <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-php-line"></i>PHP</p></div>
         </Folder>
       </div>
+      <aside>
+        <div className={styles.projects}>
+        
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+            <Project 
+            title="test" 
+            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
+            description="Duis aute irure dolor in velit esse cillum dolore."
+            project="https://www.youtube.com"
+            />
+        </div>
+      </aside>
     </main>
   )
 }

@@ -31,6 +31,7 @@
   cursor: pointer;
   transition: all 200ms ease;
   font-weight: 500;
+  user-select: none;
 }
 
 .header ul a:hover {
