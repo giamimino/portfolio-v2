@@ -9,3 +9,61 @@
   overflow: hidden;
   position: relative;
 }
+
+
+.error {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  gap: 146px;
+  padding: 198px 200px;
+  justify-content: center;
+}
+
+.error img {
+  align-self: start;;
+}
+
+.error ol li {
+  color: $primitive-slate-50;
+}
+
+.error ol li::marker {
+  color: $theme-foreground;
+}
+
+.error ol li:nth-child(1) span:nth-child(1),
+.error ol li:nth-child(3) span:nth-child(1),
+.error ol li:nth-child(7) span:nth-child(1) {
+  color: $primitive-indigo-500;
+}
+
+.error ol li:nth-child(1) span:nth-child(2),
+.error ol li:nth-child(4) span:nth-child(1),
+.error ol li:nth-child(5) span:nth-child(1),
+.error ol li:nth-child(6) span:nth-child(1),
+.error ol li:nth-child(4) span:nth-child(2),
+.error ol li:nth-child(5) span:nth-child(2),
+.error ol li:nth-child(6) span:nth-child(2),
+.error ol li:nth-child(7) span:nth-child(2),
+.error ol li:nth-child(16) span:nth-child(1) {
+
+  color: $primitive-rose-400;
+}
+
+.error ol li:nth-child(10),
+.error ol li:nth-child(11),
+.error ol li:nth-child(12),
+.error ol li:nth-child(13),
+.error ol li:nth-child(14) {
+  color: $theme-foreground;
+}
+
+.error ol li:nth-child(1) span:nth-child(3),
+.error ol li:nth-child(4) span:nth-child(3),
+.error ol li:nth-child(5) span:nth-child(3),
+.error ol li:nth-child(6) span:nth-child(3),
+.error ol li:nth-child(7) span:nth-child(3),
+.error ol li:nth-child(16) span:nth-child(2) {
+  color: $primitive-teal-600;
+}
