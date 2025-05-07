@@ -1,0 +1,76 @@
+@use './color.scss' as *;
+@import url(https://fonts.googleapis.com/css?family=Fira+Code:300,regular,500,600,700);
+
+.contactWrapper {
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  color: $theme-foreground;
+}
+
+.contact > div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-weight: 500;
+}
+
+.contact input,
+.contact textarea {
+  padding: 12px;
+  background-color: $theme-theme-backdrop;
+  border: 1px solid $theme-theme-stroke;
+  color: $theme-foreground;
+  border-radius: 8px;
+  resize: none;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-left: 1px solid $theme-theme-stroke;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $primitive-slate-500;
+    border-radius: none;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $primitive-slate-600;
+  }
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: $theme-foreground;
+  font-weight: 500;
+  font-family: "Fira Code", sans-serif;
+}
+
+.contact button {
+  padding: 10px 12px;
+  width: fit-content;
+  color: $primitive-slate-500;
+  background-color: $primitive-slate-700;
+  border-radius: 8px;
+  border: 1px solid $primitive-slate-700;
+  font-weight: 600;
+  font-family: "Fira Code", sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+
+.contact > div:last-child {
+  color: $semantic-error-background;
+}
