@@ -8,6 +8,10 @@
   border: 1px solid $theme-theme-stroke;
   overflow: hidden;
   position: relative;
+
+  @media (width <= 600px) {
+    height: 100%;
+  }
 }
 
 

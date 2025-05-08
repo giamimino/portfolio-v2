@@ -8,6 +8,10 @@
   z-index: 99;
   background-color: $theme-theme-background;
   position: relative;
+
+  @media (width <= 425px) {
+    display: none;
+  }
 }
 
 .header h1 {
@@ -46,4 +50,119 @@
 
 .header ul a.active {
  border-bottom: 2px solid $primary-background;
+}
+
+@media (width > 945px) {
+  .mobileHeader {
+    display: none;
+  }
+}
+
+@media (width <= 945px) {
+  .header {
+    display: none;
+  }
+
+  .mobileHeader {
+    display: block;
+  }
+
+  .mobileHeader header {
+    width: 100%;
+    padding: 16px 24px;
+    background-color: transparent;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $theme-theme-stroke;
+    color: $theme-foreground;
+    align-items: center;
+  }
+
+  .mobileHeader header h1 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .mobileHeader header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 18px;
+    height: 16px;
+    overflow: hidden;
+  }
+
+  .mobileHeader header ul li {
+    width: 100%;
+    position: absolute;
+    border: 1.7px solid $primitive-slate-500;
+    background-color: $primitive-slate-500;
+    transition: all .3s ease;
+  }
+
+  .mobileHeader header ul li:nth-child(1) {
+    top: 0;
+    left: 0;
+  } 
+
+  .mobileHeader header ul li:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .mobileHeader header ul li:nth-child(3) {
+    bottom: 0;
+  }
+
+  .checkbox {
+    display: none;
+}
+
+
+  .checkbox:checked + .hamburger ul li:nth-child(1) {
+    transform: rotate(45deg);
+    top: 7px;
+  }
+
+  .checkbox:checked + .hamburger ul li:nth-child(2) {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  
+  .checkbox:checked + .hamburger ul li:nth-child(3) {
+    transform: rotate(-45deg);
+    bottom: 7px;
+  }
+
+  .slide {
+    display: none;
+  } 
+
+  .checkbox:checked ~ .slide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: $primitive-slate-900;
+    position: absolute;
+    z-index: 99;
+    padding: 12px 0;
+  }
+  
+  .slide p,
+  .slide a {
+    border-bottom: 1px solid  $theme-theme-stroke;
+    padding: 12px 24px;
+  }
+
+  .slide p {
+    color: $theme-foreground;
+  }
+
+  .slide a {
+    color: $theme-heading-foreground;
+  }
 }

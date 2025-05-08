@@ -50,3 +50,13 @@
   border-right: none;
   cursor: pointer;
 }
+
+@media (width <= 530px) {
+  .footer ul a:nth-child(1) {
+    font-size: 12px;
+  }
+
+  .footer ul a:last-child p {
+    display: none;
+  }
+}

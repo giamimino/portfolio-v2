@@ -15,7 +15,7 @@ const Footer = () => {
         <Link href="https://www.linkedin.com/in/gia-miminoshvili-2a89642aa/" target="_blank"><Image src="svg/in.svg" alt="img"
         width={24}
         height={24} /></Link>
-        <Link href="https://github.com/giamimino" target="_blank">@giamimino <Image src="svg/github.svg" alt="img"
+        <Link href="https://github.com/giamimino" target="_blank"><p>@giamimino</p> <Image src="svg/github.svg" alt="img"
         width={24}
         height={24} /></Link>
       </ul>
