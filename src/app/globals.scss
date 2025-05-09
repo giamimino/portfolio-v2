@@ -8,6 +8,9 @@ body {
 }
 
 body {
+  transition-property: opacity, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
   background: $theme-theme-backdrop;
   padding: 70px;
 
@@ -41,4 +44,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.page-transition {
+  opacity: 0;
+  transform: translateY(-20px) scale(1.01);
+  filter: blur(10px);
 }
