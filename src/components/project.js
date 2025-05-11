@@ -12,8 +12,6 @@ const Project = (props) => {
         <img 
           src={props.image} 
           alt="project" 
-          width={500}
-          height={145} 
         />
         <div>
           <p>{props.description}</p>
