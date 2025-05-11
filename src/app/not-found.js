@@ -12,25 +12,24 @@ export default function NotFound() {
         <Image src="./svg/404.svg" width={312} height={180} alt="404" />
         <div>
           <ol>
-            <li><span>const</span> page = <span>findPage</span>{"("}<span>'you-were-looking-for'</span>{")"}</li>
+            <li><span>const</span> page = <span>findPage</span>{"("}<span>&apos;you-were-looking-for&apos;</span>{")"}</li>
             <li><br /></li>
             <li><span>if</span> <span>{"("}!page{")"} {"{"}</span></li>
-            <li><span>console</span>.<span>log</span>{"("}<span>"Oops! Looks like you took a wrong turn in the codebase."</span>{");"}</li>
-            <li><span>console</span>.<span>log</span>{"("}<span>"But hey, since you're here…"</span>{");"}</li>
-            <li><span>console</span>.<span>log</span>{"("}<span>"🔍 Go back to the homepage and explore more cool stuff!"</span>{");"}</li>
-            <li><span>throw new</span> <span>Error</span>{"("}<span>"404: PageNotFoundError 😢"</span>{");"}</li>
+            <li><span>console</span>.<span>log</span>{"("}<span>&quot;Oops! Looks like you took a wrong turn in the codebase.&quot;</span>{");"}</li>
+            <li><span>console</span>.<span>log</span>{"("}<span>&quot;But hey, since you&apos;re here…&quot;</span>{");"}</li>
+            <li><span>console</span>.<span>log</span>{"("}<span>&quot;🔍 Go back to the homepage and explore more cool stuff!&quot;</span>{");"}</li>
+            <li><span>throw new</span> <span>Error</span>{"("}<span>&quot;404: PageNotFoundError 😢&quot;</span>{");"}</li>
             <li>{"}"}</li>
             <li><br /></li>
             <li>/* Suggestions:</li>
-            <li>{"* –"} Check the URL for typos</li>
-            <li>{"* –"} Use the site navigation</li>
-            <li>{"* –"} Or hit CMD+Z in real life 😅</li>
+            <li> * - Check the URL for typos</li>
+            <li> * - Use the site navigation</li>
+            <li> * - Or hit CMD+Z in real life 😅</li>
             <li>*/</li>
             <li><br /></li>
-            <li><span>redirect</span>{"("}<span>'home'</span>{");"}</li>
+            <li><span>redirect</span>{"("}<span>&apos;home&apos;</span>{");"}</li>
           </ol>
         </div>
-
       </main>
       <Footer />
     </div>
