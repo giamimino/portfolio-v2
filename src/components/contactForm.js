@@ -72,8 +72,12 @@ const ContactC = () => {
 
         <button type="submit">submit_message</button>
         <div>
-        {error && 
-          error.map((e) =><div className={styles[success ? "success" : "error"]}>{e}</div>)}
+          {error &&
+            error.map((e, key) => (
+              <div key={key} className={styles[success ? "success" : "error"]}>
+                {e}
+              </div>
+            ))}
         </div>
       </form>
     </main>

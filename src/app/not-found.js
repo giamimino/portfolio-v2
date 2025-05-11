@@ -21,11 +21,11 @@ export default function NotFound() {
             <li><span>throw new</span> <span>Error</span>{"("}<span>&quot;404: PageNotFoundError 😢&quot;</span>{");"}</li>
             <li>{"}"}</li>
             <li><br /></li>
-            <li>{"/"}* Suggestions:</li>
+            <li>&#47;* Suggestions:</li>
             <li> * - Check the URL for typos</li>
             <li> * - Use the site navigation</li>
             <li> * - Or hit CMD+Z in real life 😅</li>
-            <li>*/</li>
+            <li>*&#47;</li>
             <li><br /></li>
             <li><span>redirect</span>{"("}<span>&apos;home&apos;</span>{");"}</li>
           </ol>

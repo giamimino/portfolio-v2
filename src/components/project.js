@@ -1,17 +1,20 @@
 'use client'
 import Link from 'next/link';
-import styles from '../styles/project.module.scss'
+import styles from '../styles/project.module.scss';
+import Image from 'next/image';
 
 const Project = (props) => {
   return (
     <div className={styles.project}>
       <header>
-        <p>Project {props.index + 1}</p><p>// _{props.title}</p>
+        <p>Project {props.index + 1}</p><p>&#47;&#47; _{props.title}</p>
       </header>
       <footer>
-        <img 
+        <Image 
           src={props.image} 
           alt="project" 
+          width={500}
+          height={300}
         />
         <div>
           <p>{props.description}</p>
