@@ -6,6 +6,9 @@
   flex-direction: column;
   gap: 16px;
   width: 100%;
+  height: 100%;
+  align-self: stretch;
+  flex: 1;
 }
 
 .project header {
@@ -46,7 +49,7 @@
 
 .project footer img {
   width: 100%;
-  height: 145px !important;
+  height: 180px !important;
   object-fit: cover;
   border-bottom: 1px solid $primitive-slate-800;
   border-top-right-radius: 12px;

@@ -5,6 +5,7 @@ import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
 import Project from './project';
 import Image from 'next/image';
+import projects from './projects.json';
 
 const Folder = ({ title, children, classR }) => {
   const [open, setOpen] = useState(false);
@@ -32,59 +33,27 @@ const Folder = ({ title, children, classR }) => {
 const ProjectContent = () => {
   return (
     <main className={styles.main}>
-      <div className={styles.sideBar}>
+      <div style={{ width: "332.61px" }} className={styles.sideBar}>
         <Folder title="projects" classR="mainFolder">
           <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-reactjs-line"></i>React</p></div>
           <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-html5-fill"></i>HTML</p></div>
           <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-css3-fill"></i>CSS</p></div>
           <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-php-line"></i>PHP</p></div>
+          <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-javascript-fill"></i>JS</p></div>
         </Folder>
       </div>
       <aside>
         <div className={styles.projects}>
-        
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
-            <Project 
-            title="test" 
-            image="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg" 
-            description="Duis aute irure dolor in velit esse cillum dolore."
-            project="https://www.youtube.com"
-            />
+          {projects.map((project, index) => (
+                <Project
+                key={index}
+                index={index}
+                title={project.title} 
+                image={project.image}
+                description={project.des}
+                project={project.url}
+                />
+          ))};
         </div>
       </aside>
     </main>

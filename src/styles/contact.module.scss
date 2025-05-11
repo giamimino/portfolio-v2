@@ -80,19 +80,6 @@
 
 .success {
   color: $semantic-success-background;
-  animation: disapear 0.3s ease forwards;
   width: 100%;
   font-size: auto;
-}
-
-@keyframes disapear {
-  0% {
-    opacity: 1;
-    filter:  blur(0);
-  }
-  
-  100% {
-    opacity: 0;
-    filter:  blur(5px);
-  }
 }
