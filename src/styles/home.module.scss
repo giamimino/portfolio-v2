@@ -8,6 +8,12 @@
   align-items: center;
   gap: 146px;
   position: relative;
+
+  @media (width <= 768px) {
+    gap: 0;
+    padding: 64px 24px;
+    display: block;
+  }
 }
 
 
@@ -15,6 +21,10 @@
  display: flex;
  flex-direction: column;
  gap: 75px;
+
+ @media (width <= 768px) {
+   gap: 50px;
+ }
 }
 
 .homeMain main aside:nth-child(1) {
@@ -33,12 +43,27 @@
   font-size: 60px;
   line-height: 66px;
   font-weight: 400;
+
+  @media (width <= 768px) {
+    font-size: 48px;
+    line-height: 57.6pxpx;
+  }
+
+  @media (width <= 375px) {
+    font-size: 42px;
+    line-height: 52.8px;
+  }
 }
 
 .homeMain main aside:nth-child(1) p:last-child {
   color: $primitive-indigo-500;
   font-size: 30px;
   line-height: 42px;
+
+  @media (width <= 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .homeMain main aside:nth-child(2) {
@@ -51,6 +76,12 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
+}
+
+.homeMain main aside:nth-child(2) p:nth-child(1) {
+  @media (width <= 768px) {
+    display: none;
+  }
 }
 
 .homeMain main aside:nth-child(2) p:nth-child(1),
@@ -83,7 +114,11 @@
 }
 
 
-
+.homeMain section img:not(:nth-child(1)) {
+  @media (width <= 768px) {
+    display: none;
+  }
+}
 
 .homeMain section img:nth-child(1) {
   position: absolute;

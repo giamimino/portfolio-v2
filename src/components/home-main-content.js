@@ -58,30 +58,30 @@ const HomeMainContent = () => {
         </aside>
       </main>
       <section>
-      <Image className={styles.imageOne} src="/images/PastedImage.png" alt="icon"
+      <Image className={styles.pasted} src="/images/PastedImage.png" alt="icon"
         width={779}
         height={742}      
        />
        
-      <Image className={styles.imageTwo}
+      <Image
         src="/images/code-snippet.png"
         alt="Code snippet"
         width={560}
         height={182}
       />
-      <Image className={styles.imagethree}
+      <Image
         src="/images/code-snippet.png"
         alt="Code snippet"
         width={560}
         height={182}
       />
-      <Image className={styles.imageFour}
+      <Image
         src="/images/code-snippet.png"
         alt="Code snippet"
         width={560}
         height={182}
       />
-      <Image className={styles.imageOne}
+      <Image
         src="/images/code-snippet.png"
         alt="Code snippet"
         width={560}

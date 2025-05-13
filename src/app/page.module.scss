@@ -9,8 +9,8 @@
   overflow: hidden;
   position: relative;
 
-  @media (width <= 600px) {
-    height: 100%;
+  @media (width <= 375px) {
+      height: calc(100vh - 106px);
   }
 }
 
