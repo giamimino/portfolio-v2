@@ -4,7 +4,6 @@ import styles from '../styles/projects.module.scss'
 import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
 import Project from './project';
-import Image from 'next/image';
 import projects from './projects.json';
 
 const Folder = ({ title, children, classR }) => {
@@ -30,34 +29,67 @@ const Folder = ({ title, children, classR }) => {
   );
 };
 
+const techs = [
+  { key: "react", icon: "ri-reactjs-line", label: "React" },
+  { key: "html", icon: "ri-html5-fill", label: "HTML" },
+  { key: "css", icon: "ri-css3-fill", label: "CSS" },
+  { key: "php", icon: "ri-php-line", label: "PHP" },
+  { key: "js", icon: "ri-javascript-fill", label: "JS" },
+];
+
 const ProjectContent = () => {
+  const [filter, setFilter] = useState([]);
+
+  function handleFilterChange(event) {
+    const { value, checked } = event.target;
+    setFilter(prev =>
+      checked ? [...prev, value] : prev.filter(item => item !== value)
+    );
+  }
+
+  const filteredProjects =
+    filter.length === 0
+      ? projects
+      : projects.filter(project =>
+          filter.some(f => project[f])
+        );
+
   return (
     <main className={styles.main}>
-      <div style={{ width: "332.61px" }} className={styles.sideBar}>
+      <div className={styles.sideBar}>
         <Folder title="projects" classR="mainFolder">
-          <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-reactjs-line"></i>React</p></div>
-          <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-html5-fill"></i>HTML</p></div>
-          <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-css3-fill"></i>CSS</p></div>
-          <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-php-line"></i>PHP</p></div>
-          <div className={styles.filesLang}><input type="checkbox" /><p><i className="ri-javascript-fill"></i>JS</p></div>
+          {techs.map(tech => (
+            <div className={styles.filesLang} key={tech.key}>
+              <input
+                type="checkbox"
+                value={tech.key}
+                onChange={handleFilterChange}
+                checked={filter.includes(tech.key)}
+              />
+              <p>
+                <i className={tech.icon}></i>
+                {tech.label}
+              </p>
+            </div>
+          ))}
         </Folder>
       </div>
       <aside>
         <div className={styles.projects}>
-          {projects.map((project, index) => (
-                <Project
-                key={index}
-                index={index}
-                title={project.title} 
-                image={project.image}
-                description={project.des}
-                project={project.url}
-                />
-          ))};
+          {filteredProjects.map((project, index) => (
+            <Project
+              key={index}
+              index={index}
+              title={project.title}
+              image={project.image}
+              description={project.des}
+              project={project.url}
+            />
+          ))}
         </div>
       </aside>
     </main>
-  )
-}
+  );
+};
 
 export default ProjectContent;

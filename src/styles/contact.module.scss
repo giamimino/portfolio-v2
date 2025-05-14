@@ -7,6 +7,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (width <= 768px) {
+    height: fit-content;
+    padding: 24px;
+    justify-content: center;
+    align-items: normal;
+  }
 }
 
 .contact {
@@ -14,6 +21,14 @@
   gap: 24px;
   flex-direction: column;
   color: $theme-foreground;
+
+  @media (width <= 768px) {
+    gap: 18px;
+  }
+
+  @media (width <= 480px) {
+    gap: 12px;
+  }
 }
 
 .contact > div {
