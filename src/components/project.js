@@ -3,9 +3,12 @@ import Link from 'next/link';
 import styles from '../styles/project.module.scss';
 import Image from 'next/image';
 
+
 const Project = (props) => {
   return (
-    <div className={styles.project}>
+    <div
+
+     className={styles.project}>
       <header>
         <p>Project {props.index + 1}</p><p>&#47;&#47; _{props.title}</p>
       </header>

@@ -5,6 +5,8 @@ import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
 import Project from './project';
 import projects from './projects.json';
+import { useEffect } from 'react';
+
 
 const Folder = ({ title, children, classR }) => {
   const [open, setOpen] = useState(false);
@@ -39,6 +41,7 @@ const techs = [
 
 const ProjectContent = () => {
   const [filter, setFilter] = useState([]);
+  const [classed, setClassed] = useState([]);
 
   function handleFilterChange(event) {
     const { value, checked } = event.target;
@@ -51,8 +54,24 @@ const ProjectContent = () => {
     filter.length === 0
       ? projects
       : projects.filter(project =>
-          filter.some(f => project[f])
+          filter.some(f => project[f]),
         );
+  
+  useEffect(() => {
+    const indices = filteredProjects.map((_, index) => index)
+    setClassed(indices);
+
+    const durationPerItem = 100;
+    const animationDuration = 500;
+
+    const totalDuration = (filteredProjects.length - 1) * durationPerItem + animationDuration;
+
+    const timer = setTimeout(() => {
+      setClassed([]);
+    }, totalDuration)
+
+    return () => clearTimeout(timer);
+  }, [filter.join(',')]);
 
   return (
     <main className={styles.main}>
@@ -77,14 +96,22 @@ const ProjectContent = () => {
       <aside>
         <div className={styles.projects}>
           {filteredProjects.map((project, index) => (
-            <Project
-              key={index}
-              index={index}
-              title={project.title}
-              image={project.image}
-              description={project.des}
-              project={project.url}
-            />
+            <div
+              ket={index}
+              className={
+                classed.includes(index) ? styles.autoBlur : ""
+              }
+              style={{animationDelay: `${index * 100}ms`}}
+              >
+              <Project
+                key={index}
+                index={index}
+                title={project.title}
+                image={project.image}
+                description={project.des}
+                project={project.url}
+              />
+            </div>
           ))}
         </div>
       </aside>

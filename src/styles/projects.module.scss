@@ -151,3 +151,22 @@
     padding-bottom: 300px;
   }
 }
+
+.autoBlur {
+  animation: autoBlur 0.5s ease-in-out forwards;
+  opacity: 0;
+}
+
+@keyframes autoBlur {
+  0% {
+    filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

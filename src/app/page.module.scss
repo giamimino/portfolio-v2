@@ -71,3 +71,58 @@
 .error ol li:nth-child(16) span:nth-child(2) {
   color: $primitive-teal-600;
 }
+
+.buttons {
+  display: none;
+}
+
+@media (width <= 425px) {
+  .error {
+    flex-direction: column;
+    gap: 40px;
+    padding: 64px 24px;
+    justify-content: center;
+  }
+
+  .error img {
+    width: 295px;
+    height: 126px;
+    align-self: flex-start;
+  }
+
+  .error ol li:not(:nth-child(7)) {
+    display: none;
+  }
+
+  .error ol li:nth-child(7) {
+    list-style: none;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 4px;
+  }
+
+  .buttons a,
+  .buttons button {
+    color: $primitive-slate-50;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+  }
+
+  .buttons button {
+    border-right: 1px solid $primitive-slate-50;
+    padding-right: 10px;
+  }
+
+  .buttons a:nth-child(2) {
+    border-left: 1px solid $primitive-slate-50;
+    padding-left: 10px;
+  }
+
+  .buttons a span,
+  .buttons button span {
+    color: $primitive-rose-400;
+  }
+}
