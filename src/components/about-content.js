@@ -34,7 +34,7 @@ const Folder = ({ title, children, classR }) => {
 };
 
 const renderSkills = () => {
-  const technical_skills = skills[1].technical_skills
+  const dataSkills = skills[1].dataSkills;
 
   return (
     <>
@@ -46,51 +46,21 @@ const renderSkills = () => {
           ))}
         </ul>
       </div>
-      <div className={styles.technical_skills}>
-        <h2>_technical_skills</h2>
-        <div>
-          <ul>
-            <h3>_front_end</h3>
-            {technical_skills.front_end.map((data, index) => (
-              <li key={index}>{data}</li>
+      {Object.entries(dataSkills).map(([category, items]) => (
+        <div key={category} className={styles[category]}>
+          <h2>_{category}</h2>
+          <div>
+            {Object.entries(items).map(([cat, its]) => (
+                <ul key={cat}>
+                  <h3>{cat}</h3>
+                  {its.map((it, index) => (
+                    <li key={index}>{it}</li>
+                  ))}
+                </ul>
             ))}
-          </ul>
-          <ul>
-            <h3>_architecture</h3>
-            {technical_skills.architecture.map((data, index) => (
-              <li key={index}>{data}</li>
-            ))}
-          </ul>
-          <ul>
-            <h3>_tools</h3>
-            {technical_skills.tools.map((data, index) => (
-              <li key={index}>{data}</li>
-            ))}
-          </ul>
+          </div>
         </div>
-      </div>
-      <div className={styles.skills}>
-        <ul>
-          <h2>_learning_and_research</h2>
-          <ul>
-            {skills[2].learning_and_research.map((data, index) => (
-              <li key={index}>{data}</li>
-            ))}
-          </ul>
-        </ul>
-        <ul>
-          <h2>_social_and_mentoring</h2>
-          {skills[3].social_and_mentoring.map((data, index) => (
-            <li key={index}>{data}</li>
-          ))}
-        </ul>
-        <ul>
-          <h2>_practical_skills</h2>
-          {skills[4].practical_skills.map((data, index) => (
-            <li key={index}>{data}</li>
-          ))}
-        </ul>
-      </div>
+      ))}
     </>
   )
 }
