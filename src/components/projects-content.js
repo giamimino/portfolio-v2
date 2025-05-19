@@ -71,7 +71,7 @@ const ProjectContent = () => {
     }, totalDuration)
 
     return () => clearTimeout(timer);
-  }, [filter.join(',')]);
+  }, [filteredProjects]);
 
   return (
     <main className={styles.main}>
@@ -97,7 +97,7 @@ const ProjectContent = () => {
         <div className={styles.projects}>
           {filteredProjects.map((project, index) => (
             <div
-              ket={index}
+              key={index}
               className={
                 classed.includes(index) ? styles.autoBlur : ""
               }
