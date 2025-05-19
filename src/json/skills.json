@@ -1,14 +1,14 @@
 [
   {
     "personal_skills": [
-      "Critical thinking",
-      "Problem-solving ability",
-      "Independent learning",
-      "Motivation for challenging projects",
-      "Sense of responsibility",
-      "Patience and persistence",
-      "Clear communication",
-      "Creative vision in project planning"
+      "Critical thinking.",
+      "Problem-solving ability.",
+      "Independent learning.",
+      "Motivation for challenging projects.",
+      "Sense of responsibility.",
+      "Patience and persistence.",
+      "Clear communication.",
+      "Creative vision in project planning."
     ]
   },
   {
@@ -41,15 +41,23 @@
       },
       "developmental_skills": {
         "learning_and_research": [
-          "In-depth study of complex concepts (genetics, physics, astrophysics)",
-          "Reading and understanding scientific literature",
-          "Self-development across various disciplines"
+          "In-depth study of complex concepts (genetics, physics, astrophysics).",
+          "Reading and understanding scientific literature.",
+          "Self-development across various disciplines."
+        ],
+        "social_and_mentoring": [
+          "Effective communication skills for clear idea sharing and understanding others.",
+          "Ability to empathize and respond to others' feelings and needs.",
+          "Strong collaboration skills to work well within a team.",
+          "Capability to manage and resolve conflicts peacefully.",
+          "Experience in mentoring beginners and guiding them in their development.",
+          "Motivating and supporting others to achieve their best."
         ],
         "practical_skills": [
-          "Starting structured projects (personal profile system)",
-          "Translating concepts into functional features",
-          "Breaking down multi-stage projects into phases",
-          "Applying technical knowledge to real-world projects"
+          "Starting structured projects (personal profile system).",
+          "Translating concepts into functional features.",
+          "Breaking down multi-stage projects into phases.",
+          "Applying technical knowledge to real-world projects."
         ]
       }
     }
