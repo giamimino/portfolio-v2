@@ -6,7 +6,7 @@ import styles from "../styles/about.module.scss";
 import me from "../json/me.json";
 import hobby from "../json/hobby.json";
 import skills from "../json/skills.json";
-import { set } from "mongoose";
+import goals from "../json/goals.json";
 import Link from "next/link";
 
 const Folder = ({ title, children, classR }) => {
@@ -79,7 +79,13 @@ const renderHobby = () => (
     <h1>{hobby.title}</h1>
     <p>{hobby.content}</p>
   </>
-)
+);
+const renderGoals = () => (
+  <>
+    <h1>{goals.title}</h1>
+    <p>{goals.content}</p>
+  </>
+);
 const Sidebar = ({ setAboutContent }) => {
   function testKey(key) {
     switch (key) {
