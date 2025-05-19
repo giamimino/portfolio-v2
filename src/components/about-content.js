@@ -3,7 +3,11 @@
 import { useState } from "react";
 import 'remixicon/fonts/remixicon.css';
 import styles from "../styles/about.module.scss";
-
+import me from "../json/me.json";
+import hobby from "../json/hobby.json";
+import skills from "../json/skills.json";
+import { set } from "mongoose";
+import Link from "next/link";
 
 const Folder = ({ title, children, classR }) => {
   const [open, setOpen] = useState(false);
@@ -29,21 +33,126 @@ const Folder = ({ title, children, classR }) => {
   );
 };
 
-const Sidebar = () => {
+const renderSkills = () => {
+  const technical_skills = skills[1].technical_skills
+
+  return (
+    <>
+      <div className={styles.personal_skills}>
+        <h2>_personal_skills</h2>
+        <ul>
+          {skills[0].personal_skills.map((data, index) => (
+            <li key={index}>{data}</li>
+          ))}
+        </ul>
+      </div>
+      <div className={styles.technical_skills}>
+        <h2>_technical_skills</h2>
+        <div>
+          <ul>
+            <h3>_front_end</h3>
+            {technical_skills.front_end.map((data, index) => (
+              <li key={index}>{data}</li>
+            ))}
+          </ul>
+          <ul>
+            <h3>_architecture</h3>
+            {technical_skills.architecture.map((data, index) => (
+              <li key={index}>{data}</li>
+            ))}
+          </ul>
+          <ul>
+            <h3>_tools</h3>
+            {technical_skills.tools.map((data, index) => (
+              <li key={index}>{data}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div className={styles.skills}>
+        <ul>
+          <h2>_learning_and_research</h2>
+          <ul>
+            {skills[2].learning_and_research.map((data, index) => (
+              <li key={index}>{data}</li>
+            ))}
+          </ul>
+        </ul>
+        <ul>
+          <h2>_social_and_mentoring</h2>
+          {skills[3].social_and_mentoring.map((data, index) => (
+            <li key={index}>{data}</li>
+          ))}
+        </ul>
+        <ul>
+          <h2>_practical_skills</h2>
+          {skills[4].practical_skills.map((data, index) => (
+            <li key={index}>{data}</li>
+          ))}
+        </ul>
+      </div>
+    </>
+  )
+}
+const renderMe = () => (
+  <>
+    {me.map((data, index) => (
+      <>
+        <h1>{data.title}</h1>
+        <p>{data.content}</p>
+      </>
+    ))}
+  </>
+);
+const renderHobby = () => (
+  <>
+    <h1>{hobby.title}</h1>
+    <p>{hobby.content}</p>
+  </>
+)
+const Sidebar = ({ setAboutContent }) => {
+  function testKey(key) {
+    switch (key) {
+      case "me":
+        setAboutContent(renderMe());
+        break;
+
+        case "skills":
+          setAboutContent(renderSkills());
+          break;
+
+          case "goals":
+            setAboutContent(renderGoals());
+            break;
+
+            case "hobby":
+              setAboutContent(renderHobby());
+              break;
+
+              case "10th-grade-school":
+                setAboutContent(renderEducation());
+                break;
+
+                case "self-learned":
+                  setAboutContent(renderLearnPath());
+                  break;
+    }
+  }
+
   return (
     <div className={styles.sidebar}>
       <Folder title="personal-info" classR="mainFolder">
         <Folder title="bio" classR="secondaryFolder bioFolder">
-          <div className={styles.markdown}><i className="ri-markdown-fill"></i> Me</div>
-          <div className={styles.markdown}><i className="ri-markdown-fill"></i> Skills</div>
+          <div onClick={() => testKey("me")} className={styles.markdown}><i className="ri-markdown-fill"></i> Me</div>
+          <div onClick={() => testKey("skills")} className={styles.markdown}><i className="ri-markdown-fill"></i> Skills</div>
         </Folder>
         <Folder title="interests" classR="secondaryFolder interestsFolder">
-          <div className={styles.markdown}><i className="ri-markdown-fill"></i> Goals</div>
-          <div className={styles.markdown}><i className="ri-markdown-fill"></i> Hobby</div>
+          <div onClick={() => testKey("goals")} className={styles.markdown}><i className="ri-markdown-fill"></i> Goals</div>
+          <div onClick={() => testKey("hobby")} className={styles.markdown}><i className="ri-markdown-fill"></i> Hobby</div>
         </Folder>
         <Folder title="education" classR="secondaryFolder educationFolder">
-          <div className={styles.markdown}><i className="ri-markdown-fill"></i> 10th-grade-school</div>
-          <div className={styles.markdown}><i className="ri-markdown-fill"></i> Self-learned</div>
+          <div onClick={() => testKey("10th-grade-school")} className={styles.markdown}><i className="ri-markdown-fill"></i> 10th-grade-school</div>
+          <div onClick={() => testKey("self-learned")} className={styles.markdown}><i className="ri-markdown-fill"></i> Self-learned</div>
         </Folder>
       </Folder>
       <Folder title="contacts" classR="mainFolder">
@@ -55,9 +164,39 @@ const Sidebar = () => {
         <i className="ri-phone-fill"></i>
           +995511212091
         </div>
+        <Link href="https://www.tiktok.com/@beberi_developeri" target="_blank" className={styles.contact}>
+        <i class="ri-tiktok-fill"></i>
+          <p>@beberi-developeri</p>
+        </Link>
+        <Link href="https://www.instagram.com/giamiminoshvili/" target="_blank" className={styles.contact}>
+        <i class="ri-instagram-fill"></i>
+          <p>@giamiminoshvili</p>
+        </Link>
+        <Link href="https://www.youtube.com/@DevByGia" target="_blank" className={styles.contact}>
+        <i class="ri-youtube-fill"></i>
+          <p>@devbygia</p>
+        </Link>
+        <Link href="https://www.facebook.com/gia.miminoshvili.92" target="_blank" className={styles.contact}>
+        <i class="ri-facebook-box-fill"></i>
+          <p>@gia.miminoshvili.92</p>
+        </Link>
       </Folder>
     </div>
   );
 };
 
-export default Sidebar;
+
+
+export default function AboutContent() {
+  const [aboutContent, setAboutContent] = useState("");
+
+  return (
+    <main className={styles.about}>
+      <Sidebar setAboutContent={setAboutContent}/>
+      <div className={styles.content}>
+       {aboutContent}
+      </div>
+    </main>
+
+  )
+};

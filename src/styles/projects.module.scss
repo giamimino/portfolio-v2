@@ -112,28 +112,6 @@
   padding: 64px 64px 177px 64px;
   overflow-y: auto;
   scroll-behavior: smooth;
-
-  &::-webkit-scrollbar {
-    width: 18px;
-
-    @media (width <= 425px) {
-      width: 4px;
-    }
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    border-left: 1px solid $theme-theme-stroke;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $primitive-slate-500;
-    border-radius: none;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: $primitive-slate-600;
-  }
   
   @media (width <= 1100px) {
     grid-template-columns: auto auto;

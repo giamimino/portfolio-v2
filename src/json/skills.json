@@ -1,0 +1,62 @@
+[
+  {
+    "personal_skills": [
+      "Critical thinking",
+      "Problem-solving ability",
+      "Independent learning",
+      "Motivation for challenging projects",
+      "Sense of responsibility",
+      "Patience and persistence",
+      "Clear communication",
+      "Creative vision in project planning"
+    ]
+  },
+  {
+    "technical_skills": {
+      "front_end": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React.js",
+        "Next.js",
+        "Tailwind CSS",
+        "Basic UI/UX design skills"
+      ],
+      "architecture": [
+        "Component-based design",
+        "Personal profile system design"
+      ],
+      "tools": [
+        "Git",
+        "GitHub",
+        "Git CLI",
+        "Vercel",
+        "npm",
+        "linux"
+      ]
+    }
+  },
+  {
+    "learning_and_research": [
+      "In-depth study of complex concepts (genetics, physics, astrophysics)",
+      "Reading and understanding scientific literature",
+      "Self-development across various disciplines",
+      "Focus on children's education and learning strategies"
+    ]
+  },
+  {
+    "social_and_mentoring": [
+      "Seeking motivation strategies for younger brother's education",
+      "Family-centered approach to problem-solving",
+      "Effort in communicating with children and taking responsibility"
+    ]
+  },
+  {
+    "practical_skills": [
+      "Starting structured projects (personal profile system)",
+      "Translating concepts into functional features",
+      "Breaking down multi-stage projects into phases",
+      "Applying technical knowledge to real-world projects"
+    ]
+  }
+]
