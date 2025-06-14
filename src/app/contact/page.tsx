@@ -1,7 +1,7 @@
-import Header from "@/components/Header";
+import Header from "../../components/Header";
 import styles from "../page.module.scss";
-import Footer from "@/components/footer";
-import ContactC from "@/components/contactForm";
+import Footer from "../../components/footer";
+import ContactC from "../../components/contactForm";
 
 
 export default function About() {
