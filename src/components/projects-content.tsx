@@ -42,21 +42,26 @@ const techs = [
   { key: "html", icon: "ri-html5-fill", label: "HTML" },
   { key: "css", icon: "ri-css3-fill", label: "CSS" },
   { key: "php", icon: "ri-php-line", label: "PHP" },
-  { key: "js", icon: "ri-javascript-fill", label: "JS" },
+  { key: "JavaScript", icon: "ri-javascript-fill", label: "JS" },
+  { key: "ReactNative", icon: "ri-reactjs-line", label: "ReactNative" },
+  { key: "typescript", icon: "ri-javascript-fill", label: "TS" },
 ];
 
 export default function ProjectContent() {
   const [filter, setFilter] = useState([]);
   const [classed, setClassed] = useState([]);
-  const [projects, setProjects] = useState<any[]>([])
+  const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const { data } = await supabase.from('projects_crud').select()
-      if (data) setProjects(data)
+    const getProjects = async () => {
+      const { data: projects } = await supabase.from('projects_crud').select()
+
+      if (projects && projects.length > 1) {
+        setProjects(projects)
+      }
     }
 
-    fetchProjects()
+    getProjects()
   }, [])
 
   function handleFilterChange(event) {
@@ -122,9 +127,9 @@ export default function ProjectContent() {
               <Project
                 key={index}
                 index={index}
-                title={project.title}
-                image={project.image}
-                description={project.des}
+                title={project.title || "No title available"}
+                image={project.image || "https://www.uticomputadores.com/erro-java-assinador-assinadoc-erro-00000f62/"}
+                description={project.description || "No description available"}
                 project={project.url}
               />
             </div>
