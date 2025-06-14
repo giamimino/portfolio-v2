@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: scroll;
+  overflow: auto;
 
   @media (width <= 768px) {
     height: fit-content;
@@ -21,7 +21,7 @@
   display: flex;
   gap: 18px;
   flex-direction: column;
-  overflow-y: scroll;
+  overflow: auto;
   color: $theme-foreground;
 
   @media (width <= 768px) {
@@ -48,24 +48,6 @@
   color: $theme-foreground;
   border-radius: 8px;
   resize: none;
-
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    border-left: 1px solid $theme-theme-stroke;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $primitive-slate-500;
-    border-radius: none;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background-color: $primitive-slate-600;
-  }
 }
 
 .contact input::placeholder,
