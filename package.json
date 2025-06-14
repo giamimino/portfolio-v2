@@ -23,7 +23,8 @@
     "react-dom": "^19.1.0",
     "remixicon": "^4.6.0",
     "remixicons": "^4.6.1",
-    "sass": "^1.87.0"
+    "sass": "^1.87.0",
+    "scss": "^0.2.4"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

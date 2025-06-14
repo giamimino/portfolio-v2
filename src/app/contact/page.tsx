@@ -4,7 +4,7 @@ import Footer from "../../components/footer";
 import ContactC from "../../components/contactForm";
 
 
-export default function About() {
+export default function Contacts() {
   return (
     <div className={styles.page}>
       <Header />
