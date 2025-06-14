@@ -5,7 +5,7 @@ import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
 import Project from './project';
 import { useEffect } from 'react';
-import { supabase } from '../utils/supabase'
+import { supabase } from '../utils/supabase/client'
 
 
 type FolderProps = {
@@ -50,7 +50,7 @@ const techs = [
 export default function ProjectContent() {
   const [filter, setFilter] = useState([]);
   const [classed, setClassed] = useState([]);
-  const [projects, setProjects] = useState([])
+  const [projects, setProjects] = useState<any[]>([])
 
   useEffect(() => {
     const getProjects = async () => {
