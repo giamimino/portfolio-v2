@@ -1,7 +1,7 @@
 'use client'
 
-import Header from "@/components/Header";
-import Footer from "@/components/footer";
+import Header from "../components/Header";
+import Footer from "../components/footer";
 import styles from "./page.module.scss";
 import Image from "next/image";
 import 'remixicon/fonts/remixicon.css';

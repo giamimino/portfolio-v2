@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { TransitionLink } from "./transitionLink";
 
-const Header = () => {
+export default function Header() {
   const pathname = usePathname();
   const [menuVisible, setMenuVisible] = useState(false);
 
@@ -50,5 +50,3 @@ const Header = () => {
     </>
   )
 }
-
-export default Header;

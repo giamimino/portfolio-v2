@@ -7,10 +7,21 @@ const ContactC = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [error, setError] = useState([]);
+  const [error, setError] = useState<string[]>([]);
   const [success, setSuccess] = useState(false);
 
-  const handleSubmit = async (e) => {
+  interface ContactFormData {
+    name: string;
+    email: string;
+    message: string;
+  }
+
+  interface ContactApiResponse {
+    msg: string[];
+    success: boolean;
+  }
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log("name: " + name);
@@ -26,14 +37,13 @@ const ContactC = () => {
         name,
         email,
         message,
-      }),
+      } as ContactFormData),
     });
-    
-    const { msg, success } = await res.json();
+
+    const { msg, success }: ContactApiResponse = await res.json();
     setError(msg);
     setSuccess(success);
     console.log(error);
-    
 
     if (success) {
       setName("");
@@ -66,7 +76,7 @@ const ContactC = () => {
           <textarea
           onChange={(e) => setMessage(e.target.value)} 
           value={message} 
-          type="text" cols="30" rows="8" placeholder="your message here ..." id="message"  name="message"></textarea>
+          cols={30} rows={8} placeholder="your message here ..." id="message"  name="message"></textarea>
           
         </div>
 

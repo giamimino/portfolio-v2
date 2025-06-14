@@ -4,11 +4,17 @@ import styles from '../styles/projects.module.scss'
 import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
 import Project from './project';
-import projects from './projects.json';
 import { useEffect } from 'react';
+import { supabase } from '../utils/supabase'
 
 
-const Folder = ({ title, children, classR }) => {
+type FolderProps = {
+  title: string;
+  children: React.ReactNode;
+  classR: string;
+};
+
+const Folder = ({ title, children, classR }: FolderProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -39,9 +45,19 @@ const techs = [
   { key: "js", icon: "ri-javascript-fill", label: "JS" },
 ];
 
-const ProjectContent = () => {
+export default function ProjectContent() {
   const [filter, setFilter] = useState([]);
   const [classed, setClassed] = useState([]);
+  const [projects, setProjects] = useState<any[]>([])
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      const { data } = await supabase.from('projects_crud').select()
+      if (data) setProjects(data)
+    }
+
+    fetchProjects()
+  }, [])
 
   function handleFilterChange(event) {
     const { value, checked } = event.target;
@@ -118,5 +134,3 @@ const ProjectContent = () => {
     </main>
   );
 };
-
-export default ProjectContent;

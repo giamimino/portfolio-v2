@@ -1,7 +1,7 @@
 import styles from "./page.module.scss";
-import Header from "@/components/Header";
-import HomeMainContent from "@/components/home-main-content";
-import Footer from "@/components/footer";
+import HomeMainContent from "../components/home-main-content";
+import Footer from "../components/footer";
+import Header from "../components/Header";
 
 
 export default function Home() {
