@@ -64,12 +64,13 @@ export default function ProjectContent() {
     getProjects()
   }, [])
 
-  function handleFilterChange(event) {
+  function handleFilterChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { value, checked } = event.target;
     setFilter(prev =>
       checked ? [...prev, value] : prev.filter(item => item !== value)
     );
   }
+
 
   const filteredProjects =
     filter.length === 0
