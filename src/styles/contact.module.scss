@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 
   @media (width <= 768px) {
     height: fit-content;
@@ -18,7 +19,7 @@
 
 .contact {
   display: flex;
-  gap: 24px;
+  gap: 18px;
   flex-direction: column;
   color: $theme-foreground;
 
@@ -34,7 +35,7 @@
 .contact > div {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 6px;
   font-weight: 500;
 }
 
