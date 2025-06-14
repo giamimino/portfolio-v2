@@ -5,7 +5,7 @@ import { useState } from 'react'
 import 'remixicon/fonts/remixicon.css';
 import Project from './project';
 import { useEffect } from 'react';
-import { supabase } from '../utils/supabase/client'
+import { supabase } from '../utils/supabase'
 
 
 type FolderProps = {
