@@ -19,14 +19,27 @@
           "CSS",
           "SASS & SCSS",
           "JavaScript",
+          "TypeScript",
           "React.js",
           "Next.js",
           "Tailwind CSS",
+          "Responsive design",
           "Basic UI/UX design skills"
+        ],
+        "back_end": [
+          "JavaScript",
+          "Prisma ORM",
+          "MySQL",
+          "PostgreSQL",
+          "REST APIs",
+          "Authentication systems (session & token-based)"
         ],
         "architecture": [
           "Component-based design",
-          "Personal profile system design"
+          "Personal profile system design",
+          "API route structuring in Next.js",
+          "Authentication flow (login/register)",
+          "State management (local state, props)"
         ],
         "tools": [
           "Git",
@@ -34,11 +47,22 @@
           "Git CLI",
           "Vercel",
           "npm",
-          "linux",
+          "Linux",
           "Figma",
-          "vs code"
+          "VS Code",
+          "Prisma Studio",
+          "Browser DevTools"
+        ],
+        "other": [
+          "Basic knowledge of deployment (Vercel)",
+          "Form validation (client-side)",
+          "Cookie/session handling in browser",
+          "Basic database schema design",
+          "Basic SEO in Next.js",
+          "Working with environment variables"
         ]
       },
+
       "developmental_skills": {
         "learning_and_research": [
           "In-depth study of complex concepts (genetics, physics, astrophysics).",
