@@ -6,7 +6,7 @@
   height: 100%;
 
   @media (width <= 425px) {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 }
 

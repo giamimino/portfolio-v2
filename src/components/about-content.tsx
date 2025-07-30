@@ -119,7 +119,7 @@ export default function AboutContent() {
 
 
   return (
-    <main style={{ display: "flex", height: "100vh" }}>
+    <main className={styles.about}>
       <div className={styles.sidebar}>
         <Folder title="personal-info" classR="mainFolder">
           <Folder title="bio" classR="secondaryFolder bioFolder">
