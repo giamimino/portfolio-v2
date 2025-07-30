@@ -93,7 +93,7 @@ export default function ProjectContent() {
     }, totalDuration)
 
     return () => clearTimeout(timer);
-  }, [filteredProjects]);
+  }, [filter]);
 
   return (
     <main className={styles.main}>

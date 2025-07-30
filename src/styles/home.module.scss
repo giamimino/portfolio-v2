@@ -9,10 +9,28 @@
   gap: 146px;
   position: relative;
 
+  @media (width <= 1320px) {
+    justify-content: start;
+    padding: 48px;
+    padding-bottom: 102px;
+    gap: 64px;
+  }
+
+  @media (width <= 1080px) {
+    img {
+      display: none;
+    }
+  }
+
   @media (width <= 768px) {
     gap: 0;
     padding: 64px 24px;
     display: block;
+  }
+
+  img {
+    width: 400px;
+    height: 150px;
   }
 }
 
@@ -60,9 +78,13 @@
   font-size: 30px;
   line-height: 42px;
 
+  @media (width <= 1320px) {
+    font-size: 24px;
+  }
+
   @media (width <= 768px) {
     font-size: 20px;
-    line-height: 30px;
+    line-height: 28px;
   }
 }
 

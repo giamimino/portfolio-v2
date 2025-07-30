@@ -29,6 +29,9 @@ const Folder = ({ title, children, classR }: FolderProps) => {
             .join(" ")
         }
         onClick={() => setOpen(!open)}
+        style={{
+          cursor: "pointer"
+        }}
       >
         <i className={open ? "ri-arrow-drop-down-line" : "ri-arrow-drop-right-line"} />
         {title}
@@ -140,7 +143,7 @@ export default function AboutContent() {
           <div className={styles.contact}>
           <i className="ri-phone-fill"></i>
             +995511212091
-          </div>l
+          </div>
           <Link href="https://www.tiktok.com/@beberi_developeri" target="_blank" className={styles.contact}>
           <i className="ri-tiktok-fill"></i>
             <p>@beberi-developeri</p>

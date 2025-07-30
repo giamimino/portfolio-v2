@@ -149,6 +149,10 @@
     border: none;
   }
 
+  &:hover {
+    color: $primitive-slate-300;
+  }
+
   a:hover {
     text-decoration: underline;
   }
@@ -170,6 +174,10 @@
   gap: 8px;
   cursor: pointer;
   user-select: none;
+
+  &:hover {
+    color: $primitive-slate-300;
+  }
 }
 
 .bioFolder i:nth-child(2) {
@@ -187,6 +195,11 @@
 .markdown {
   padding: 3px 6px 3px 48px;
   color: $primitive-slate-500;
+  cursor: pointer;
+
+  &:hover {
+    color: $primitive-slate-600;
+  }
 }
 
 .contact {
