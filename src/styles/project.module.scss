@@ -15,9 +15,7 @@
   gap: 8px;
 
   p {
-    @media (width <= 670px) {
-      font-size: 14px;
-    }
+    font-size: 14px;
   }
 }
 
