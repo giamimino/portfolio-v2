@@ -6,7 +6,7 @@
   position: relative;
   display: flex;
 
-  @media (width <= 425px) {
+  @media (width <= 600px) {
     flex-direction: column;
   }
 }
@@ -20,7 +20,7 @@
   position: relative;
   user-select: none;
 
-  @media (width <= 425px) {
+  @media (width <= 600px) {
     width: 100%;
     border-right: none;
     height: fit-content;
@@ -38,7 +38,7 @@
     padding: 12px 24px 12px 24px;
   }
 
-  @media (width <= 425px) {
+  @media (width <= 600px) {
     padding: 12px 24px;
     border-bottom: none;
     width: 100%;
@@ -104,25 +104,32 @@
 }
 
 .projects {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  gap: 40px;
-  padding: 64px 64px 177px 64px;
+  gap: 32px;
+  padding: 48px 48px 177px 48px;
   overflow-y: auto;
   scroll-behavior: smooth;
   
   @media (width <= 1100px) {
     grid-template-columns: repeat(2, 1fr);
+    padding: 48px 48px 177px 48px;
   }
 
   @media (width <= 1024px) {
     grid-template-columns: 1fr;
+    padding: 32px 32px 177px 32px;
   }
 
-  @media (width <= 425px) {
+  @media (width <= 675px) {
+    padding: 16px 16px 177px 16px;
+    grid-template-rows: auto;
+  }
+
+  @media (width <= 600px) {
     padding: 24px;
     gap: 24px;
     overflow-y: auto;

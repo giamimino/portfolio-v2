@@ -4,10 +4,8 @@
 .project {
   display: grid;
   gap: 16px;
-  width: 100%;
+  width: 275px;
   height: 100%;
-  align-self: stretch;
-  flex: 1;
   grid-template-rows: subgrid;
 }
 
@@ -15,6 +13,12 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
+
+  p {
+    @media (width <= 670px) {
+      font-size: 14px;
+    }
+  }
 }
 
 .project header p:nth-child(1) {
