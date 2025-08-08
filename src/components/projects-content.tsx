@@ -6,6 +6,7 @@ import 'remixicon/fonts/remixicon.css';
 import Project from './project';
 import { useEffect } from 'react';
 import { supabase } from '../utils/supabase'
+import { Icon } from '@iconify/react';
 
 
 type FolderProps = {
@@ -38,13 +39,14 @@ const Folder = ({ title, children, classR }: FolderProps) => {
 };
 
 const techs = [
-  { key: "react", icon: "ri-reactjs-line", label: "React" },
-  { key: "html", icon: "ri-html5-fill", label: "HTML" },
-  { key: "css", icon: "ri-css3-fill", label: "CSS" },
-  { key: "php", icon: "ri-php-line", label: "PHP" },
-  { key: "JavaScript", icon: "ri-javascript-fill", label: "JS" },
-  { key: "ReactNative", icon: "ri-reactjs-line", label: "ReactNative" },
-  { key: "typescript", icon: "ri-javascript-fill", label: "TS" },
+  { key: "html", icon: "flowbite:html-solid", label: "HTML" },
+  { key: "css", icon: "uim:css3", label: "CSS" },
+  { key: "php", icon: "ri:php-fill", label: "PHP" },
+  { key: "JavaScript", icon: "bi:javascript", label: "JS" },
+  { key: "react", icon: "mdi:react", label: "React" },
+  { key: "ReactNative", icon: "mdi:react", label: "ReactNative" },
+  { key: "typescript", icon: "bi:typescript", label: "TS" },
+  { key: "prisma", icon: "file-icons:prisma", label: "Prisma" },
 ];
 
 export default function ProjectContent() {
@@ -108,7 +110,7 @@ export default function ProjectContent() {
                 checked={filter.includes(tech.key)}
               />
               <p>
-                <i className={tech.icon}></i>
+                <Icon icon={tech.icon} />
                 {tech.label}
               </p>
             </div>
