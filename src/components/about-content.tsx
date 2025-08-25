@@ -7,7 +7,7 @@ import me from "../json/me.json";
 import hobby from "../json/hobby.json";
 import skills from "../json/skills.json";
 import goals from "../json/goals.json";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type FolderProps = {
   title: string;
@@ -55,7 +55,7 @@ const renderSkills = () => {
         </ul>
       </div>
       {Object.entries(dataSkills ?? []).map(([category, items]) => (
-        <div key={category} className={styles[category]}>
+        <div key={category} className={`${styles[category]} ${styles.category}`}>
           <h2>_{category}</h2>
           <div>
             {Object.entries(items).map(([cat, its]) => (
@@ -96,7 +96,8 @@ const renderGoals = () => (
 );
 
 export default function AboutContent() {
-  const [content, setContent] = useState<React.ReactNode>(null);
+  const [content, setContent] = useState<React.ReactNode>(renderSkills());
+  const router = useRouter()
 
   function handleCntent(key: string) {
     switch (key) {
@@ -113,7 +114,7 @@ export default function AboutContent() {
         setContent(renderGoals());
         break;
       default:
-        setContent(null);
+        setContent(renderSkills());
     }
   }
 
@@ -136,7 +137,7 @@ export default function AboutContent() {
           </Folder>
         </Folder>
         <Folder title="contacts" classR="mainFolder">
-          <div className={styles.contact}>
+          <div className={styles.contact} onClick={() => router.push('/contact')}>
           <i className="ri-mail-fill"></i>
             miminoshvili2102@gmail.com
           </div>
@@ -144,22 +145,6 @@ export default function AboutContent() {
           <i className="ri-phone-fill"></i>
             +995511212091
           </div>
-          <Link href="https://www.tiktok.com/@beberi_developeri" target="_blank" className={styles.contact}>
-          <i className="ri-tiktok-fill"></i>
-            <p>@beberi-developeri</p>
-          </Link>
-          <Link href="https://www.instagram.com/giamiminoshvili/" target="_blank" className={styles.contact}>
-          <i className="ri-instagram-fill"></i>
-            <p>@giamiminoshvili</p>
-          </Link>
-          <Link href="https://www.youtube.com/@DevByGia" target="_blank" className={styles.contact}>
-          <i className="ri-youtube-fill"></i>
-            <p>@devbygia</p>
-          </Link>
-          <Link href="https://www.facebook.com/gia.miminoshvili.92" target="_blank" className={styles.contact}>
-          <i className="ri-facebook-box-fill"></i>
-            <p>@gia.miminoshvili.92</p>
-          </Link>
         </Folder>
       </div>
       <div className={styles.content}>

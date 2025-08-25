@@ -9,9 +9,6 @@ const Footer = () => {
     <footer className={styles.footer}>
       <ul>
         <Link href="">find me in:</Link>
-        <Link href="https://x.com/Dev103116" target="_blank"><Image src="svg/x.svg" alt="img"
-        width={24}
-        height={24} /></Link>
         <Link href="https://www.linkedin.com/in/gia-miminoshvili-2a89642aa/" target="_blank"><Image src="svg/in.svg" alt="img"
         width={24}
         height={24} /></Link>

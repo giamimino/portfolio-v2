@@ -100,7 +100,7 @@ export default function ProjectContent() {
   return (
     <main className={styles.main}>
       <div className={styles.sideBar}>
-        <Folder title="projects" classR="mainFolder">
+        <Folder title="projects filter" classR="mainFolder">
           {techs.map(tech => (
             <div className={styles.filesLang} key={tech.key}>
               <input
@@ -119,7 +119,7 @@ export default function ProjectContent() {
       </div>
       <aside>
         <div className={styles.projects}>
-          {filteredProjects.map((project, index) => (
+          {filteredProjects.reverse().map((project, index) => (
             <div
               key={index}
               className={

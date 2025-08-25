@@ -23,8 +23,7 @@
           "React.js",
           "Next.js",
           "Tailwind CSS",
-          "Responsive design",
-          "Basic UI/UX design skills"
+          "Responsive design"
         ],
         "back_end": [
           "JavaScript",
@@ -60,28 +59,6 @@
           "Basic database schema design",
           "Basic SEO in Next.js",
           "Working with environment variables"
-        ]
-      },
-
-      "developmental_skills": {
-        "learning_and_research": [
-          "In-depth study of complex concepts (genetics, physics, astrophysics).",
-          "Reading and understanding scientific literature.",
-          "Self-development across various disciplines."
-        ],
-        "social_and_mentoring": [
-          "Effective communication skills for clear idea sharing and understanding others.",
-          "Ability to empathize and respond to others' feelings and needs.",
-          "Strong collaboration skills to work well within a team.",
-          "Capability to manage and resolve conflicts peacefully.",
-          "Experience in mentoring beginners and guiding them in their development.",
-          "Motivating and supporting others to achieve their best."
-        ],
-        "practical_skills": [
-          "Starting structured projects (personal profile system).",
-          "Translating concepts into functional features.",
-          "Breaking down multi-stage projects into phases.",
-          "Applying technical knowledge to real-world projects."
         ]
       }
     }
