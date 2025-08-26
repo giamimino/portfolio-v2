@@ -59,7 +59,7 @@ export default function ProjectContent() {
       const { data: projects } = await supabase.from('projects_crud').select()
 
       if (projects && projects.length > 1) {
-        setProjects(projects)
+        setProjects(projects.reverse())
       }
     }
 
@@ -119,7 +119,7 @@ export default function ProjectContent() {
       </div>
       <aside>
         <div className={styles.projects}>
-          {filteredProjects.reverse().map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <div
               key={index}
               className={
